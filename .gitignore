@@ -1,0 +1,15 @@
+*.class
+*.jar
+*.war
+*.ear
+build/
+target/
+project/project
+project/target
+.DS_Store
+.classpath
+.project
+output/
+.bundle
+vendor/ruby
+data
