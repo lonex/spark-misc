@@ -6,6 +6,11 @@ Spark instances that interact with Cassandra, DynamoDB and the log files.
  
 All examples are ready to be run in AWS EC-2 Spark cluster.
 
+There is a unified configuration file in `src/main/resources/application.conf`.
+
+Helper scripts is provided to run database migration.
+
+
 ## Dependency
 
 - SBT 0.13.7, sbt-assembly 0.12.0
@@ -28,7 +33,7 @@ This will create an uber jar that include all the example code.
 ## Cassandra and Spark example
 
 
-### Run Cassandra setup and database migration first
+### Run Cassandra setup and database migration first (Require the uber jar)
 
 Create keyspace in C* by using the CQL script in `src/cql/create_keyspace.cql`
 
@@ -55,6 +60,8 @@ dependency jars due to the elimination of the Zookeeper.
  
 
 ## DynamoDB examples
+
+This requires pre-existing table in AWS DynamoDB.
 
 Please refer to examples under `src/main/scala/com/acme/dynamo/`
 
